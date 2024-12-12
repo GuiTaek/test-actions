@@ -23,3 +23,11 @@ jobs:
     - name: print dir
       run: |
         pwd
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        path: ./scripts
+    - name: Add commit
+      run: git commit --allow-empty -m "empty commit"
+    - name: save commit
+      run: git push
