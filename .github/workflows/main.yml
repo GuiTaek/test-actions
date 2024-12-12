@@ -28,6 +28,10 @@ jobs:
       with:
         path: ./scripts
     - name: Add commit
-      run: git commit --allow-empty -m "empty commit"
+      run: |
+        cd test
+        git commit --allow-empty -m "empty commit"
     - name: save commit
-      run: git push
+      run: |
+        cd test
+        git push
